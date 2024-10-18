@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <div class="navbar-brand">
+                <img src="Images/app_logo.png" alt="Team 62" width="30" height="30">
+                <span style="color: rgb(124, 255, 124);">
+                    <span style="color: azure;"><strong>Encryptor</strong></span> 62
+                </span>
+            </div>
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Encryption
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Chesar Chiper</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">ASA</a></li>
+                  <li><a class="dropdown-item" href="#">SHA</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- inihalaman1 -->
+
+      <div class="container-fluid halaman" id="home">
+        <div class="d-flex justify-content-between" style="height: 100vh; color: rgb(235, 255, 223);">
+            <div class="ms-5 d-none d-lg-flex align-items-start justify-content-center flex-column">
+                <h1>Encryption 62</h1>
+                <h2>Your Best Ultimate Encryptor</h1>
+            </div>
+            <div class="m-5 flex-column justify-content-center align-items-center d-lg-none">
+                <h3>Encryption 62</h3>
+                <h4>Your Best Ultimate Encryptor</h4>
+            </div>
+            <img src="Images/image1-removebg.png" width="600px">
+        </div>
+      </div>
+
+      <!-- inihalaman2 -->
+
+      <section class="halaman2">
+        <div class="container-fluid text-center mt-5 text-white">
+          <h2 class="mb-5">About Us</h2>
+          <div class="row justify-content-center mt-5">
+            <div class="col-2">
+              <div class="rounded-pill" style="background-color: red;">
+                nandigamin
+              </div>
+            </div>
+            <div class="col-2">
+              nandi
+            </div>
+            <div class="col-2">
+              nandi
+            </div>
+          </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#023020" fill-opacity="1" d="M0,64L0,96L90,96L90,192L180,192L180,288L270,288L270,192L360,192L360,288L450,288L450,0L540,0L540,192L630,192L630,96L720,96L720,288L810,288L810,0L900,0L900,288L990,288L990,64L1080,64L1080,160L1170,160L1170,160L1260,160L1260,224L1350,224L1350,96L1440,96L1440,320L1350,320L1350,320L1260,320L1260,320L1170,320L1170,320L1080,320L1080,320L990,320L990,320L900,320L900,320L810,320L810,320L720,320L720,320L630,320L630,320L540,320L540,320L450,320L450,320L360,320L360,320L270,320L270,320L180,320L180,320L90,320L90,320L0,320L0,320Z"></path></svg>
+      </section>
+
+
+    <!-- inihalaman3 -->
+
+    <section class="halaman3 text-white">
+      <div class="container">
+        <h1 class="text-center mb-4">Chesar Chiper</h1>
+        <!-- Plaintext Input Form -->
+        <div class="mb-3">
+            <label for="plaintext" class="form-label">Plaintext</label>
+            <input type="text" class="form-control" id="plaintext" placeholder="Enter your text here">
+        </div>
+        <div class="mb-3">
+          <label for="formFile" class="form-label">Input File</label>
+          <input class="form-control" type="file" id="formFile">
+        </div>
+
+        <!-- Ciphertext Output -->
+        <div class="mb-3">
+          <label for="ciphertext" class="form-label">Ciphertext</label>
+          <div id="ciphertext" class="p-3 bg-dark text-success rounded border border-success shadow-lg text-center">
+              <span id="ciphertextText" class="fst-italic">Your encrypted text will appear here...</span>
+          </div>
+        </div>
+        
+        <!-- Button to decrypt -->
+        <div class="d-grid gap-2">
+          <button class="btn btn-warning" type="button" onclick="decryptText()">Decrypt</button>
+        </div>
+        <!-- Encrypt Button -->
+        <div class="d-grid gap-2">
+            <button class="btn btn-primary" type="button" onclick="encryptText()">Encrypt</button>
+        </div>
+    </div>
+    </section>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+      // Dummy encryption function (Caesar Cipher as example)
+      function encryptText() {
+          const plaintext = document.getElementById('plaintext').value;
+          const shift = 3; // Example shift for Caesar Cipher
+          let ciphertext = '';
+          for (let i = 0; i < plaintext.length; i++) {
+              let charCode = plaintext.charCodeAt(i);
+              // Shift for A-Z and a-z
+              if (charCode >= 65 && charCode <= 90) {
+                  ciphertext += String.fromCharCode(((charCode - 65 + shift) % 26) + 65);
+              } else if (charCode >= 97 && charCode <= 122) {
+                  ciphertext += String.fromCharCode(((charCode - 97 + shift) % 26) + 97);
+              } else {
+                  ciphertext += plaintext[i]; // Non-alphabet characters remain the same
+              }
+          }
+          document.getElementById('ciphertext').innerText = ciphertext;
+      }
+      function decryptText() {
+          const plaintext = document.getElementById('plaintext').value;
+          const shift = 3; // Example shift for Caesar Cipher
+          let ciphertext = '';
+          for (let i = 0; i < plaintext.length; i++) {
+              let charCode = plaintext.charCodeAt(i);
+              // Shift for A-Z and a-z
+              if (charCode >= 65 && charCode <= 90) {
+                  ciphertext += String.fromCharCode(((charCode - 65 - shift) % 26) + 65);
+              } else if (charCode >= 97 && charCode <= 122) {
+                  ciphertext += String.fromCharCode(((charCode - 97 - shift) % 26) + 97);
+              } else {
+                  ciphertext += plaintext[i]; // Non-alphabet characters remain the same
+              }
+          }
+          document.getElementById('ciphertext').innerText = ciphertext;
+      }
+
+    </script>
+  </body>
+</html>
