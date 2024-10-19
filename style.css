@@ -8,6 +8,29 @@ body{
     background: linear-gradient(90deg, rgba(5,31,32,1) 0%, rgba(35,83,71,1) 100%); 
 }
 
+.icon-profile{
+    width: 75px;
+    height: 75px;
+}
+.ling{
+    all:unset;
+    color: #fff;
+    text-decoration: none;
+}
+.contact_{
+    background-color: #ffffff00;
+    text-decoration: none;
+}
+.contact_:hover{
+    background-color: rgb(13, 116, 3);
+    text-decoration: none;
+}
+@media screen and (max-width:600px) {
+    .contact_{
+        min-width: 300px;
+    }
+}
+
 .halaman {
     max-height: 100vh;
 }
