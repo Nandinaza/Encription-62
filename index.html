@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Encryptor 62</title>
-
+    
     <!-- favicon -->
     <link rel="Images" sizes="180x180" href="/Images/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/Images/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/Images/favicon_io/favicon-16x16.png">
     <link rel="manifest" href="/Images/favicon_io/site.webmanifest">
-
+    
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
@@ -32,14 +32,14 @@
                 <a class="nav-link active" aria-current="page" href="#home">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#halaman2">About</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Encryption
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Chesar Chiper</a></li>
+                  <li><a class="dropdown-item" href="#halaman3">Chesar Chiper</a></li>
                   <li><hr class="dropdown-divider"></li>
                   <li><a class="dropdown-item" href="#">ASA</a></li>
                   <li><a class="dropdown-item" href="#">SHA</a></li>
@@ -56,7 +56,7 @@
         <div class="d-flex justify-content-between" style="height: 100vh; color: rgb(235, 255, 223);">
             <div class="ms-5 d-none d-lg-flex align-items-start justify-content-center flex-column">
                 <h1>Encryption 62</h1>
-                <h2>Your Best Ultimate Encryptor</h1>
+                <h2>Your Best Ultimate Encryptor</h2>
             </div>
             <div class="m-5 flex-column justify-content-center align-items-center d-lg-none">
                 <h3>Encryption 62</h3>
@@ -68,7 +68,7 @@
 
       <!-- inihalaman2 -->
 
-      <section class="halaman2">
+      <section id="halaman2" class="halaman2">
         <div class="container-fluid text-center mt-5 text-white">
           <h2 class="mb-5">About Us</h2>
           <div class="row flex-column flex-sm-row justify-content-center">
@@ -113,13 +113,15 @@
 
     <!-- inihalaman3 -->
 
-    <section class="halaman3 text-white">
-      <div class="container">
+    <section id="halaman3" class="halaman3 text-white">
+      <div id="app" class="app container">
         <h1 class="text-center mb-4">Chesar Chiper</h1>
         <!-- Plaintext Input Form -->
         <div class="mb-3">
           <label for="plaintext" class="form-label">Plaintext</label>
-          <input type="text" class="form-control" id="plaintext" placeholder="Enter your text here">
+          <!-- <input type="text" class="form-control" id="plaintext" placeholder="Enter your text here"> -->
+          <input type="text" class="form-control" id="plaintext" placeholder="Enter your text here" v-model="plaintext">
+
         </div>
         <div class="mb-3">
           <label for="formFile" class="form-label">Input File</label>
@@ -130,23 +132,26 @@
         <div class="mb-3">
           <label for="ciphertext" class="form-label">Ciphertext</label>
           <div id="ciphertext" class="p-3 bg-dark text-success rounded border border-success shadow-lg text-center">
-              <span id="ciphertextText" class="fst-italic">Your encrypted text will appear here...</span>
+            <span class="fst-italic"> {{ encryptedText }} </span>
           </div>
+        
         </div>
         
-        <!-- Button to decrypt -->
+        <!-- Button to decrypt
         <div class="d-grid gap-2">
           <button class="btn btn-warning" type="button" onclick="decryptText()">Decrypt</button>
         </div>
-        <!-- Encrypt Button -->
+         Encrypt Button
         <div class="d-grid gap-2">
             <button class="btn btn-primary" type="button" onclick="encryptText()">Encrypt</button>
         </div>
+        -->
     </div>
     </section>
   
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@3"></script>
     <script src="Vue.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- <script src="script.js"></script> -->
   </body>
 </html>
